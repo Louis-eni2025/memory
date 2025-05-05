@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header id="header" class="bg-blue-500 pb-5">
+        <a href="/index.html">
+            
+        </a><img class="mx-auto pt-5" src="https://placehold.co/128x64" alt="logo"/>
+        <svg id="toggleHeader" class="h-5 mx-auto mt-6 duration-300 ease-in-out rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+        <div id="header__nav" class="hidden">
+            <nav>
+                <ul class="flex flex-col text-center justify-around py-5 gap-6">
+                    <li>
+                        <a href="/index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="">Jouer une partie</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr class="mx-auto w-50 pb-3 md:hidden">
+            <div 
+                class="mx-auto w-1/2 text-center hidden"
+                id="userMenu_connected" 
+            >
+                <h3>Mon compte</h3>
+                <img class="mx-auto py-2" src="https://www.placehold.co/32x32" alt="logo du user"/>
+                <div>
+                    <p>Gérer mon compte</p>
+                    <p>Me déconnecter</p>
+                </div>
+            </div>
+    
+            <div 
+                class="mx-auto w-1/2 text-center hidden"
+                id="userMenu_disconnected" 
+            >
+                <a href="/connexion.html">Me connecter</p>
+                <a href="/inscription.html">Créer mon compte</a>
+            </div>
+        </div>
+    </header>
+    <main class="w-11/12 mx-auto ">
+        <h1 id='title' class="w-full text-center p-5 text-xl">Register</h1>
+        <form method="POST" class="mx-auto" id="myRegisterForm">
+            <div class="w-full flex justify-between m-2">
+                <label for="name">Nom:</label>
+                <div class="w-1/2 ">
+                    <input type="text" class="p-1 w-full border rounded-sm border-slate-200 shadow-sm" name="name" id="name"  required>
+                </div>
+            </div>
+            <div class="w-full flex justify-between m-2">
+                <label for="mail">Email:</label>
+                <div class="w-1/2 ">
+                    <input type="mail" class="p-1 w-full border rounded-sm border-slate-200 shadow-sm" name="mail" id="mail" required >
+                </div>
+            </div>
+            <div class="w-full flex justify-between m-2">
+                <label for="password">Mot de passe:</label>
+                <div class="w-1/2 ">
+                    <input type="password" class="p-1 w-full border rounded-sm border-slate-200 shadow-sm" name="password" id="password" required >
+                </div>
+            </div>
+            <button type="submit" class="mt-10 mx-auto py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                S'inscrire
+            </button>
+        </form>
+    </main>
+    <script src="./scripts/account/subscription.js" type="module"></script>
+    <script src="./scripts/header/header.js"></script>
+    <script src="./scripts/user/user.js" type="module"></script>
+</body>
+</html>

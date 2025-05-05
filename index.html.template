@@ -1,0 +1,26 @@
+
+<main class="w-11/12 mx-auto ">
+
+    <section id="intro" class="pt-8 pb-4">
+        <h1 class="text-center text-2xl font-extrabold tracking-wide">Bienvenue dans <span class="text-blue-500">Memory</span></h1>
+        <p class="text-center text-lg text-gray-500">Révisez les logos des technos</p>    
+    </section>
+
+    <section id="rules" class="py-2">
+        <h2 class="text-center text-xl font-bold tracking-wide pb-5">Les <span class="text-blue-500">règles</span></h1>
+        <ul class="list-disc w-10/12 mx-auto flex flex-col gap-5">
+            <li>Retournez deux cartes. Si le <strong class="text-blue-500">logo</strong> correspond au <strong class="text-blue-500">langage</strong>, le jeu laisse les cartes visibles</li>
+            <li>Si le logo ne correspond pas au langage, les cartes se retournent faces cachées là où elles étaient</li>
+            <li>La partie est terminée lorsque toutes les cartes ont été assemblées par paires</li>
+        </ul>   
+    </section>
+    <img class="mx-auto py-4" alt="Illustration d'une partie" src="https://www.placehold.co/216x216">
+    <section class="py-4">
+        <p>Si vous voulez vous souvenir de votre score, inscrivez-vous via le forumulaire.</p>
+        <p>Le jeu garde les <strong class="text-blue-500">5 meilleurs</strong> scores</p>
+        <p>Si vous voulez relancer une partie, cliquez sur <strong class="text-blue-500 inline-block">la barre d'espace</strong></p>
+    </section>
+    
+    <button id='testButton' type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">CLIC</button>
+</main>
+
