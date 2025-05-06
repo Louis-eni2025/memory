@@ -1,0 +1,30 @@
+
+    <main class="w-11/12 mx-auto ">
+        <h1 id='title' class="w-full text-center p-5 text-xl">Register</h1>
+        <form method="POST" class="mx-auto" id="myRegisterForm">
+            <div class="w-full flex justify-between m-2">
+                <label for="name">Nom:</label>
+                <div class="w-1/2 ">
+                    <input type="text" class="p-1 w-full border rounded-sm border-slate-200 shadow-sm" name="name" id="name"  required>
+                </div>
+            </div>
+            <div class="w-full flex justify-between m-2">
+                <label for="mail">Email:</label>
+                <div class="w-1/2 ">
+                    <input type="mail" class="p-1 w-full border rounded-sm border-slate-200 shadow-sm" name="mail" id="mail" required >
+                </div>
+            </div>
+            <div class="w-full flex justify-between m-2">
+                <label for="password">Mot de passe:</label>
+                <div class="w-1/2 flex flex-col">
+                    <input type="password" class="p-1 w-full border rounded-sm border-slate-200 shadow-sm" name="password" id="password" required >
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="mt-10 mx-auto py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                S'inscrire
+            </button>
+        </form>
+    </main>

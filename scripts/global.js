@@ -1,28 +1,28 @@
-
-
 document.addEventListener('DOMContentLoaded', function(){
-    
-    // CA FAIT CHIER displayContent();
+    displayContent();
+    manageLink();
 })
 
-const links = document.getElementsByTagName('a');
+document.addEventListener('load', function(){
+    manageLink();
+})
 
-for (const link of links) {
-    link.addEventListener('click', function(e){
-        e.preventDefault();
-        displayContent(this.getAttribute('href'))
-        console.log(this.getAttribute('href'))
-        triggerDomEvent();
-    })
+function manageLink(){
+    const links = document.getElementsByTagName('a');
+    for (const link of links) {
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            displayContent(this.getAttribute('href'))
+        })
+    }
 }
 
-const $button = document.getElementById('testButton')
 
 
 function displayContent(file='index.html'){
-
-    file = file + '.template';
-    fetch(file)
+    
+    let fileFullPath = `/templates/${file}.template`;
+    fetch(fileFullPath)
     .then(response => {
         if (!response.ok) {
             throw new Error(`Erreur HTTP : ${response.status}`);
@@ -32,7 +32,7 @@ function displayContent(file='index.html'){
     .then(html => {
         let container = document.getElementById('content');
         container.innerHTML= html;
-
+        triggerDomEvent();
     })
     .catch(error => {
         console.error("Erreur lors du chargement du fichier :", error);
@@ -40,11 +40,10 @@ function displayContent(file='index.html'){
 }
 
 function triggerDomEvent(){
-    const event = new Event('DOMContentLoaded');
+    const event = new Event('load');
     document.dispatchEvent(event);
-    console.log('event')
 }
 
-export function redirect(){
-    return;
+export function redirect(location){
+    displayContent(location)
 }

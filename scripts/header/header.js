@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
 
-    console.log('headerLoaded');
 
     const $toggleHeader = document.getElementById('toggleHeader');
     $toggleHeader.addEventListener('click', function(){

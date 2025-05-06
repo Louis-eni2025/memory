@@ -29,8 +29,8 @@
                 <h3>Mon compte</h3>
                 <img class="mx-auto py-2" src="https://www.placehold.co/32x32" alt="logo du user"/>
                 <div>
-                    <p>Gérer mon compte</p>
-                    <p>Me déconnecter</p>
+                    <a href="">Gérer mon compte</a>
+                    <button type="button" class="logout_btn cursor-pointer ">Me déconnecter</button>
                 </div>
             </div>
     
@@ -46,8 +46,13 @@
     <div id="content">
 
     </div>
+
+    <!-- TODO: Trouver une maniere d'opti le chargement fichier -->
     <script src="./scripts/header/header.js"></script>
-    <script src="./scripts/user/user.js" type="module"></script>
+    <script src="./scripts/account/user.js" type="module"></script>
+    <script src="./scripts/account/connexion.js" type="module"></script>
+    <script src="./scripts/account/inscription.js" type="module"></script>
+    <script src="./scripts/account/logout.js" type="module"></script>
     <script src="./scripts/global.js" type="module"></script>
 </body>
 </html>

@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', function(){
     let menuConnected = document.getElementById('userMenu_connected');
 
     if(userConnected){
-        console.log('connected');
         show(menuConnected);
         hide(menuDisconnected);
     } else {
-        console.log('disconnected');
         show(menuDisconnected);
         hide(menuConnected);
     }
