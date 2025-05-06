@@ -1,3 +1,4 @@
+// Fichier principal de la page inscription.html
 import { checkRegex, checkInputs } from "../utils/utils.js";
 import { redirect } from "../global.js";
 
@@ -14,15 +15,36 @@ document.addEventListener('load', function(){
     
             if(formValidAndSubmit) {
                 let title = document.getElementById('title');
-                let errorUnique = document.getElementById('error_unique');
-                if(errorUnique){
-                    errorUnique.remove();
+                
+                let errorUniqueMail = document.getElementById('error_uniqueMail');
+                if(errorUniqueMail){
+                    errorUniqueMail.remove();
                 }
+
+                let errorUniqueName = document.getElementById('error_uniqueName');
+                if(errorUniqueName){
+                    errorUniqueName.remove();
+                }
+
+                let errorUnicity = false;
                 if(localStorage.getItem(formData.get('mail'))){
-                    if(!errorUnique){
-                        title.insertAdjacentHTML('afterend', '<p class="text-center text-red-400" id="error_unique">Cet email est déjà utilisée</p>');
+                    errorUnicity = true;
+                    displayUniquePropertyError('mail');
+                }
+
+                Object.keys(localStorage).forEach(function(key){
+                    let user = localStorage.getItem(key);
+                    let name = formData.get('name');
+                    if(user.includes(name)){
+                        errorUnicity = true;
+                        displayUniquePropertyError('name');
+
                     }
-                } else {
+                 });
+
+                
+        
+                if (!errorUnicity) {
     
                     let user = {
                         'name': formData.get('name'),
@@ -40,12 +62,25 @@ document.addEventListener('load', function(){
         }); 
     }
 
+
+
+    function displayUniquePropertyError(type){
+        let htmlId = `error_unique_${type}`
+        let $errorUnique = document.getElementById(htmlId);
+        if($errorUnique){
+            $errorUnique.remove();
+        }
+        title.insertAdjacentHTML('afterend', `<p class="text-center text-red-400" id="${htmlId}">Cet ${type} est déjà utilisée</p>`);
+
+    }
+
+
     const $passwordInput = document.getElementById('password');
 
     if($passwordInput){
         $passwordInput.addEventListener('input', function(){
             let strongness = checkPasswordStrongness(this.value);
-            console.log(strongness);
+            displayPasswordStrongness(strongness);
         })
     }
 
@@ -93,7 +128,47 @@ document.addEventListener('load', function(){
         return "weak";
     }
 
-    
+    function displayPasswordStrongness(strongness){
+
+        let color = getColorFromStrongness(strongness);
+        
+        let strongnessDivs = document.getElementsByClassName('password_strongness');
+        for (const $strongnessDiv of strongnessDivs) {
+            if($strongnessDiv.id === `password_${strongness}`){
+                for (let $child of $strongnessDiv.children) {
+                    $child.classList.remove('!bg-slate-300');
+                    $child.classList.remove('!text-slate-300');
+                    $child.nodeName === 'DIV' ? $child.classList.add(`bg-${color}-500`): $child.classList.add(`text-${color}-500`);
+                }
+            } else {
+                for (let $child of $strongnessDiv.children) {
+
+                    $child.nodeName === 'DIV' ? $child.classList.add('!bg-slate-300'): $child.classList.add('!text-slate-300');
+                }
+            }
+        }
+
+    }
+
+    function getColorFromStrongness(strongness){
+
+        let color;
+        switch (strongness) {
+            case 'strong':
+                color = "green";
+                break;
+            case 'medium':
+                color = "orange";
+                break;
+            case 'weak':
+                color = 'red';
+                break;
+            default:
+                color = 'slate';
+                break;
+        }
+        return color;
+    }
 
 })
 

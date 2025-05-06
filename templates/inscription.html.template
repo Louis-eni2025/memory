@@ -18,8 +18,20 @@
                 <label for="password">Mot de passe:</label>
                 <div class="w-1/2 flex flex-col">
                     <input type="password" class="p-1 w-full border rounded-sm border-slate-200 shadow-sm" name="password" id="password" required >
-                    <div>
-
+                    <div class="flex justify-between">
+                        <div id="password_weak" class="password_strongness w-1/3 flex flex-col">
+                            <div class="h-2 !bg-slate-300"></div>
+                            <p class="w-full text-center !text-slate-300 text-xs">Faible</p>
+                        </div>
+                        <div id="password_medium" class="password_strongness w-1/3 flex flex-col">
+                            <div class="h-2 !bg-slate-300"></div>
+                            <p class="w-full text-center !text-slate-300 text-xs">Moyen</p>
+                        </div>
+                        
+                        <div id="password_strong" class="password_strongness w-1/3 flex flex-col">
+                            <div class="h-2 !bg-slate-300"></div>
+                            <p class="w-full text-center !text-slate-300 text-xs">Fort</p>
+                        </div>
                     </div>
                 </div>
             </div>

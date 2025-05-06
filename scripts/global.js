@@ -1,3 +1,5 @@
+import { hideHeader } from './header/header.js'
+
 document.addEventListener('DOMContentLoaded', function(){
     displayContent();
     manageLink();
@@ -12,6 +14,7 @@ function manageLink(){
     for (const link of links) {
         link.addEventListener('click', function(e){
             e.preventDefault();
+            hideHeader()
             displayContent(this.getAttribute('href'))
         })
     }
@@ -19,7 +22,7 @@ function manageLink(){
 
 
 
-function displayContent(file='index.html'){
+function displayContent(file='game.html'){
     
     let fileFullPath = `/templates/${file}.template`;
     fetch(fileFullPath)

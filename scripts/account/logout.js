@@ -1,6 +1,6 @@
+// Gestion de la deconnexion
 function logout(){
     sessionStorage.removeItem('connectedUser');
-    console.log('called')
     
     location.reload();
     

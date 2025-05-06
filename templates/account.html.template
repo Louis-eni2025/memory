@@ -1,0 +1,22 @@
+
+    <main class="w-11/12 mx-auto ">
+        <h1 id='title' class="w-full text-center p-5 text-xl">Mon profil</h1>
+        <div class="md:w-1/2 w-10/12 mx-auto flex flex-col gap-2">
+            <div class="flex w-full justify-between">
+                <label for="display_name">Nom: </label>
+                <input class="p-1 w-1/2 border rounded-sm border-slate-200 shadow-sm bg-slate-100" disabled type="text" name="display_name" id="display_name">
+            </div>
+            <div class="flex w-full justify-between">
+                <label for="display_mail">Mail: </label>
+                <input disabled class="p-1 w-1/2 border rounded-sm border-slate-200 shadow-sm bg-slate-100" type="text" name="display_mail" id="display_mail">
+            </div>
+        </div>
+        <h2 id='title' class="w-full text-center p-5 text-xl">Mon profil</h1>
+        <div class="md:w-1/2 w-10/12 mx-auto flex flex-col gap-2">
+            <div class="flex w-10/12 mx-auto">
+                <p>Nombre de carte dans mes parties:</p>
+                <input id="user_cardNb" class="w-1/4 mx-auto p-1  border rounded-sm border-slate-200 shadow-sm" type="number" min="6" step="2">
+            </div>
+            <button type="button" class="mt-10 mx-auto py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" id="submitUserCardNumber">Valider</button>
+        </div>
+    </main>
