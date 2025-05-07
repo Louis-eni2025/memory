@@ -1,7 +1,7 @@
 // Fichier principal de la page connexion.html
 import { redirect } from "../global.js";
 
-document.addEventListener('load', function(){
+document.addEventListener('customLoad', function(){
 
 
     let title = document.getElementById('title');

@@ -15,7 +15,7 @@ function attachLogoutEvent() {
     }
 }
 
-document.addEventListener('load', attachLogoutEvent()
+document.addEventListener('customLoad', attachLogoutEvent()
 )
 
 document.addEventListener('DOMContentLoaded', attachLogoutEvent())

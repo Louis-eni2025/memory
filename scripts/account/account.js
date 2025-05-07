@@ -1,7 +1,7 @@
 // Fichier principal de la page account.html
 import { getUserNbCard, setUserNbCard } from "./user.js";
 
-document.addEventListener('load', function(){
+document.addEventListener('customLoad', function(){
     let user = sessionStorage.getItem('connectedUser');
     if(user){
         user = JSON.parse(user);

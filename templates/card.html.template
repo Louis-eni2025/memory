@@ -1,0 +1,11 @@
+<div data-card="{{SLUG}}" data-id="{{ID}}" id="flip-it" class="card bg-slate-100 h-20 w-20 mx-auto flip-card" >
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="/assets/card/cardBack.png" alt="dos de carte">
+      </div>
+      <div class="flip-card-back flex items-center  ">
+        {{CONTENT}}
+      </div>
+    </div>
+  </div>
+</div>

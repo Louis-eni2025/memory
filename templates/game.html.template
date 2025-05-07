@@ -1,43 +1,5 @@
 <main class="w-11/12 mx-auto ">
     <h1 class="text-center">Let's play !</h1>
     <div id="game" class="mt-10 grid grid-cols-4 gap-2">
-        <div data-card="php" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/PHP.png">
-        </div>
-        <div data-card="php" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden" src="/assets/logos/PHP.png">
-        </div>
-        <div data-card="c++" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/C++.png">
-        </div>
-        <div data-card="c++"class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/C++.png">
-        </div>
-        <div data-card="c" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/C.png">
-        </div>
-        <div data-card="c" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden" src="/assets/logos/C.png">
-        </div>
-        <div data-card="java" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/java.png">
-        </div>
-        <div data-card="java" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/java.png">
-        </div>
-        <div data-card="CSharp" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/C_sharp.png">
-        </div>
-        <div data-card="CSHarp" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/C_sharp.png">
-        </div>
-        <div data-card="Javascript" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/JavaScript.png">
-        </div>
-        <div data-card="Javascript" class="card bg-blue-100 h-10 w-10 mx-auto">
-            <img class="hidden"  src="/assets/logos/JavaScript.png">
-        </div>
-
-
     </div>
 </main>

@@ -2,7 +2,7 @@
 import { checkRegex, checkInputs } from "../utils/utils.js";
 import { redirect } from "../global.js";
 
-document.addEventListener('load', function(){
+document.addEventListener('customLoad', function(){
     const formRegister = document.getElementById('myRegisterForm');
     if(formRegister){
         formRegister.addEventListener("submit", function(e){
@@ -13,9 +13,7 @@ document.addEventListener('load', function(){
             let formData = new FormData(this);
             let formValidAndSubmit = manageSubscriptionForm(formData);
     
-            if(formValidAndSubmit) {
-                let title = document.getElementById('title');
-                
+            if(formValidAndSubmit) {                
                 let errorUniqueMail = document.getElementById('error_uniqueMail');
                 if(errorUniqueMail){
                     errorUniqueMail.remove();
@@ -88,9 +86,16 @@ document.addEventListener('load', function(){
     function manageErrorDisplay(isValid, key)
     {
         let HTMLElem = document.getElementById(key);
+        
         let error = document.getElementById(`error_${key}`);
         if(!isValid){
             HTMLElem.style.border = 'red 1px solid'
+            if(HTMLElem.classList.contains('wiggle')){
+                console.log('contains')
+                HTMLElem.classList.remove('wiggle');
+            }
+            HTMLElem.classList.add('wiggle');
+
             if(!error){
                 let errorHTML = `<p id="error_${key}" class="text-red-500">Le champ n'est pas valide</p>`
                 HTMLElem.insertAdjacentHTML('afterend', errorHTML);

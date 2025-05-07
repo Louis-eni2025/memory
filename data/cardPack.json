@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "img": "/assets/logos/C_sharp.png",
+        "value": "C Sharp",
+        "slug": "c_sharp"
+    },
+    {
+        "id": 2,
+        "img": "/assets/logos/C.png",
+        "value": "C",
+        "slug": "c"
+    },
+    {
+        "id": 3,
+        "img": "/assets/logos/C++.png",
+        "value": "C++",
+        "slug": "c++"
+    },
+    {
+        "id": 4,
+        "img": "/assets/logos/go.png",
+        "value": "GO",
+        "slug": "go"
+    },
+    {
+        "id": 5,
+        "img": "/assets/logos/java.png",
+        "value": "Java",
+        "slug": "java"
+    },
+    {
+        "id": 6,
+        "img": "/assets/logos/JavaScript.png",
+        "value": "Javascript",
+        "slug": "javascript"
+    },
+    {
+        "id": 7,
+        "img": "/assets/logos/Kotlin.png",
+        "value": "Kotlin",
+        "slug": "kotlin"
+    },
+    {
+        "id": 8,
+        "img": "/assets/logos/PHP.png",
+        "value": "PHP",
+        "slug": "php"
+    },
+    {
+        "id": 9,
+        "img": "/assets/logos/Python.png",
+        "value": "Python",
+        "slug": "python"
+    },
+    {
+        "id": 10,
+        "img": "/assets/logos/Rust.png",
+        "value": "Rust",
+        "slug": "rust"
+    },
+    {
+        "id": 11,
+        "img": "/assets/logos/swift.png",
+        "value": "Swift",
+        "slug": "swift"
+    }
+]
